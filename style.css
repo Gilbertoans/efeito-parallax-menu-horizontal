@@ -1,41 +1,58 @@
+/*CONFIGURAÇÃO PADRÃO DA PAGINA*/
 body{
-    font-family: Nunito,sans-serif;
-    color: #1c1c1c;
-
+    margin: 0;
+    padding: 0;
+}
+.conteudo {
+    color: #777;
+    background-color: white;
+    text-align: justify;
+    padding: 50px 80px;
 }
 
-h1,h2,h3  {
-    font-family: Asap,sans-serif;
-    color: #000000;
+h3{
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
 }
 
-.botao {
-    color: #ffffff;
+body, html {
+    margin: 0;
+    font:16px "Lato",sans-serif;
+    color: #777;
+    height: 100%;
+}
+
+p{
+    margin-bottom: 20px;
+}
+/*
+ul{
+    text-align: center;
+    list-style-type: none;
+    position: fixed;
+    left: 65%;
+}
+
+ul li{
+    float: left;
+    padding: 0 2em;
+
+}
+ul a {
     text-decoration: none;
-    padding: 10px 30px;
-    background-color: #191970;
-    font-size: .9em;
-    border-radius: 3px;
-}
+    color: #fff;
+}*/
 
 nav{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: #191970;
-}
-
-nav > a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 32px;
-    font-family: Yellowtail, serif;
 }
 
 nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     list-style: none;
     padding: 0;
@@ -53,178 +70,59 @@ nav ul li a {
     padding: 10px 0;
     width: 100%;
     text-decoration: none;
-    color: #ffffff;
+    color: #777;
+
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(/img/camera.jpg);
-    background-size: cover;
+
+
+
+/*EFEITO PARALLAX*/
+
+.caixa1, .caixa2,.caixa3, .caixa4,.caixa5,.caixa6 {
+    position: relative;
+    height: 100%;
+    opacity: 0.7;
     background-repeat: no-repeat;
-    background-position:center;
-    color: #ffffff;
-    text-align: center;
-    padding:20px ;
-}
-header h1 {
-    color: #ffffff;
-}
-
-header p {
-    margin-bottom: 2em;
+    background-size: cover; /*cobre toda a area do navegador*/
+    background-position: center;/*mantem a imgagem ao centro*/
+    background-attachment: fixed;/*fixa a imagem */
 
 }
 
-#sobre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 10px 20px 20px;
-    background-color: #191970;
-    color: #ffffff;
+.caixa1 {
+    background-image: url(img/imagem1.jpg);
 }
 
-#sobre h2 {
-    color: #ffffff;
-
+.caixa2{
+    background-image: url(img/imagem2.jpg);
+}
+.caixa3{
+    background-image: url(img/imagem3.jpg);
+}
+.caixa4{
+    background-image: url(img/imagem4.jpg);
+}
+.caixa5{
+    background-image: url(img/imagem5.jpg);
+}
+.caixa6{
+    background-image: url(img/imagem6.jpg);
 }
 
-#sobre p {
-    margin-bottom: 2.5em;
-    max-width: 1000px;
-}
-
-#sobre .botao {
-    background-color: #f1f1f1;
-    color: #1c1c1c;
-}
-
-#serviços{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    align-self:center;
-
-}
-
-#serviços div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-}
-
-#fotos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-
-}
-
-#fotos h2 {
-    margin-bottom: 20px;
-
-}
-
-#fotos img {
+.conteudo-titulo{
+    position: absolute;
+    left: 0;
+    top: 45%;
     width: 100%;
-}
-
-#contato{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 20px;
 }
 
-#contato h2{
-    color: #000000;
-}
-
-
-footer{
-    text-align: center;
-    padding: 10px;
-    background-color: #191970;
-    color: #ffffff;
-}
-
-footer a {
-    text-decoration: none;
-    color:#00ffff
-}
-
-@media screen and (min-width:768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    nav ul {
-        flex-direction: row;
-        width: 70%;
-    }
-    header{
-    height: 600px;
-    height: 60vh;
-    justify-content: center;
-    }   
-    #sobre{
-        height: 250px;
-        height: 30vh;
-        justify-content: center;
-        min-height: 250px;
-    }
-    #serviços {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        max-width: 1000px;
-        margin: 0 auto;
-
-    }
-
-    #serviços h2 {
-        text-align: center;
-        width: 100%;
-    }
-
-    #serviços div{
-        flex-grow: 1;
-        flex-basis:50px ;
-        padding: 0 10px;
-    }
-
-    #fotos {
-        flex-direction: row;
-        flex-wrap: wrap;
-
-    }
-    #fotos h2{
-        width: 100%;
-        text-align: center;
-    }
-    #fotos img{
-        width: 33.333333%;
-
-    }
-    #contato {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-width: 500px;
-        margin: 0 auto;
-
-    }
-
-    #contato h2, #contato p {
-        width: 100%;
-    }
+.conteudo-titulo span.titulo{
+    color: #fff;
+    background-color: #111;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
