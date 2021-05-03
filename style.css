@@ -126,3 +126,10 @@ nav ul li a {
     letter-spacing: 5px;
     text-transform: uppercase;
 }
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: #777;
+    color: #fff;
+}
